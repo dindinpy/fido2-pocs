@@ -1,0 +1,14 @@
+[[source]]
+verify_ssl = true
+name = "pypi"
+url = "https://pypi.org/simple"
+
+[dev-packages]
+"mock" = "<4"
+pyfakefs = {markers = "platform_system == 'Linux'",version = ">=3.4"}
+
+[packages]
+fido2 = {editable = true,path = "."}
+
+[scripts]
+test = "python -m unittest discover -v"
